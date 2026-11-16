@@ -24,6 +24,8 @@ sources:
     url: https://polar.sh/
   - source_id: source_polar_terms
     url: https://polar.sh/legal/master-services-terms
+  - source_id: source_polar_status
+    url: https://status.polar.sh
 declarations:
   - declaration_id: declaration_polar_polar_checkout_links_payment_create
     scope:
@@ -103,6 +105,12 @@ declarations:
         roles:
           - operations
           - documentation
+        operated_by_participant_id: polar
+        standard_bindings: []
+      - resource_id: service-status
+        uri: https://status.polar.sh
+        roles:
+          - status
         operated_by_participant_id: polar
         standard_bindings: []
     endpoints:
@@ -266,6 +274,15 @@ declarations:
         target:
           node_kind: resource
           node_id: mcp-documentation
+        field_paths:
+          - /uri
+          - /roles
+          - /operated_by_participant_id
+      - source_binding_id: polar-resource-service-status
+        source_id: source_polar_status
+        target:
+          node_kind: resource
+          node_id: service-status
         field_paths:
           - /uri
           - /roles
