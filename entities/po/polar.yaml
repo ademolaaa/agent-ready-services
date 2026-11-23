@@ -73,6 +73,8 @@ declarations:
           - provisioning
           - operations
           - documentation
+          - limits
+          - errors
         operated_by_participant_id: polar
         standard_bindings: []
       - resource_id: authentication
@@ -80,6 +82,7 @@ declarations:
         roles:
           - authentication
           - documentation
+          - recovery
         operated_by_participant_id: polar
         standard_bindings: []
       - resource_id: pricing
@@ -92,6 +95,7 @@ declarations:
         uri: https://polar.sh/signup
         roles:
           - access
+          - registration
         operated_by_participant_id: polar
         standard_bindings: []
       - resource_id: service-terms
